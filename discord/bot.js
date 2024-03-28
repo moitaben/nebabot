@@ -180,6 +180,14 @@ setTimeout(() => {
 
 const commands = [
     {
+        name: "neba",
+        description: "El puto amo",
+    },
+    {
+        name: "merymery",
+        description: "Mensaje del creador del bot",
+    },
+    {
         name: "shop",
         description: "Show your current daily shop!",
         options: [{
@@ -1223,6 +1231,18 @@ client.on("interactionCreate", async (interaction) => {
                     await interaction.followUp(message);
 
                     console.log(`Sent ${targetUser.tag}'s profile!`); // also logged if maintenance/login failed
+
+                    break;
+                }
+                case "neba": {
+
+                    await interaction.reply('EL PUTO AMO');
+
+                    break;
+                }
+                case "merymery": {
+
+                    await interaction.reply('EL CREADOR DE ESTE BOT TE QUIERE CON LOCURA');
 
                     break;
                 }
